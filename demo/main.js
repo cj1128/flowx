@@ -1,8 +1,10 @@
+import Flowx from "../lib/index.js"
+
 document.addEventListener("DOMContentLoaded", function () {
   window.flowx = new Flowx({
     handleClass: ".flowx-drag", // 拖动元素
     canvasElement: document.querySelector("#canvas"), // 主画布
-    onRender: (data = {}, containerEl) => {
+    onRender: (data, containerEl) => {
       return new Promise((res, rej) => {
         new Vue({
           el: containerEl,

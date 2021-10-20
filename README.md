@@ -1,5 +1,10 @@
 # Flowx
 
+## TODO
+
+- flowx 内部用到的 class 需要 prefix
+- d3 tree layout
+
 ## Design
 
 - 用户拖动 handle，cloneNode 一下
@@ -11,6 +16,9 @@
 const flowx = new Flowx({
   handleClass: "", // 拖动元素
   canvasElement: "", // 主画布
+
+  classPrefix: "", // "flowx" as default
+  datasetPrefix: "", // "flowx" as default
 
   onRender: async (data = {}, containerEl) => {},
 })
@@ -25,9 +33,9 @@ interface FlowxState {
     children: {
       data: HandleData
     }[]
-  },
+  }
 }
 
 // flowx.getState()  => FlowxState
-// flowx.setState() 
+// flowx.setState()
 ```
