@@ -2,10 +2,11 @@
 
 ## TODO
 
+- 去除不必要的 SVG 渲染(rect)
 - flowx 内部用到的 class 需要 prefix
-- 集成 d3 的依赖，目前是 demo 直接引入的
+- 集成 d3-hierarchy 的依赖，目前是 demo 直接引入的, vite ESM output
 - 根元素可以自定义位置
-- 支持不同大小的节点
+- 接口限制住，节点大小固定
 
 ## Design
 

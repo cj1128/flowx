@@ -9,7 +9,6 @@
     <link href="../lib/index.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
-    <script src="main.js" type="module"></script>
     <style>
       #redpoint {
         width: 5px;
@@ -35,13 +34,16 @@
           </div>
         </div>
       </div>
+
       <!-- <div id="centerswitch">
         <div id="leftswitch">Diagram view</div>
         <div id="rightswitch">Code editor</div>
       </div> -->
+
       <div id="buttonsright">
         <div id="publish" class="set-state">setState</div>
         <div id="publish" class="get-state">getState</div>
+        <div id="publish" class="clear">clear</div>
       </div>
     </div>
     <div id="leftcard">
@@ -207,4 +209,6 @@
     </div>
     <div id="canvas"></div>
   </body>
+
+  <script src="main.js" type="module"></script>
 </html>
