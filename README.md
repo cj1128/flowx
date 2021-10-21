@@ -3,7 +3,9 @@
 ## TODO
 
 - flowx 内部用到的 class 需要 prefix
-- d3 tree layout
+- 集成 d3 的依赖，目前是 demo 直接引入的
+- 根元素可以自定义位置
+- 支持不同大小的节点
 
 ## Design
 
