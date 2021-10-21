@@ -2,7 +2,15 @@
 
 ## Todo
 
+- 参数收进 opt 中
+- replace nodeSize with nodeWidth, nodeHeight
+- containerEl 的宽高要保持固定
+- checkAttach(elA, elB)
+- 用 vite 去跑 demo
+- 用 esbuild 打包
+- 调研一下 svg 是否可以固定大小
 - 垂直方向滚动条问题
+
 - 子树的拖拽
 
 ## Design
