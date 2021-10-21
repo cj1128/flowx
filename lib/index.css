@@ -1,12 +1,6 @@
 .flowx-block {
   position: absolute;
   z-index: 9;
-  background-color: #fff;
-  box-shadow: 0px 4px 30px rgb(22 33 74 / 5%);
-}
-
-.flowx-g rect {
-  fill: #fff;
 }
 
 .flowx-link {

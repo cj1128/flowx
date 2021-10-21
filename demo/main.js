@@ -1,4 +1,4 @@
-import Flowx from "../lib/index.js"
+import Flowx from "../dist/flowx.esm.js"
 
 const $ = document.querySelector.bind(document)
 
@@ -22,9 +22,7 @@ window.flowx = new Flowx({
 })
 
 $(".clear").addEventListener("click", async () => {
-  // TODO: why a blank rect
   await flowx.setState([])
-  $("#canvas svg").remove()
 })
 
 document.querySelector(".get-state").addEventListener("click", () => {
@@ -35,7 +33,9 @@ document.querySelector(".set-state").addEventListener("click", () => {
   flowx.setState([
     {
       id: 0,
-      parent: -1,
+      parent: "",
+      left: 200,
+      top: 300,
       data: {
         a: "0",
       },
