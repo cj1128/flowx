@@ -2,16 +2,13 @@ import Flowx from "../dist/flowx.esm.js"
 
 const $ = document.querySelector.bind(document)
 
-window.flowx = new Flowx({
-  handleClass: ".flowx-drag", // 拖动元素
-  canvasElement: document.querySelector("#canvas"), // 主画布
-  nodeSize: [320, 80],
-  onRender: (data, containerEl) => {
+window.flowx = new Flowx(
+  $("#canvas"), // 主画布
+  (data, containerEl) => {
     return new Promise((res, rej) => {
       new Vue({
         el: containerEl,
-        template:
-          "<div style='width: 320px; height: 80px; border: 1px solid #eee'>Vue {{ a }}</div>",
+        template: "<div>Vue {{ a }}</div>",
         data,
         mounted() {
           res()
@@ -19,7 +16,7 @@ window.flowx = new Flowx({
       })
     })
   },
-})
+)
 
 $(".clear").addEventListener("click", async () => {
   await flowx.setState([])

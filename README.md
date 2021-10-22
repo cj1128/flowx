@@ -2,10 +2,10 @@
 
 ## Todo
 
-- 参数收进 opt 中
-- replace nodeSize with nodeWidth, nodeHeight
-- containerEl 的宽高要保持固定
-- checkAttach(elA, elB)
+- 参数收进 opt 中 [Done]
+- replace nodeSize with nodeWidth, nodeHeight [Done]
+- containerEl 的宽高要保持固定 [Done]
+- checkAttach(elA, elB) [Done]
 - 用 vite 去跑 demo
 - 用 esbuild 打包
 - 调研一下 svg 是否可以固定大小
