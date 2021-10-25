@@ -1,0 +1,17 @@
+.flowx-dragging {
+  position: absolute;
+  z-index: 10;
+}
+
+.flowx-block {
+  position: absolute;
+  overflow: auto;
+  border: 2px solid transparent;
+  z-index: 9;
+}
+
+.flowx-link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}

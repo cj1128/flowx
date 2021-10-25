@@ -6,7 +6,7 @@
   "module": "dist/flowx.esm.js",
   "scripts": {
     "dev": "vite",
-    "build": "esbuild lib/index.js --bundle --minify --outfile=dist/flowx.esm.js"
+    "build": "esbuild lib/flowx.js --format=esm --bundle --minify --outfile=dist/flowx.esm.js"
   },
   "files": [
     "dist"

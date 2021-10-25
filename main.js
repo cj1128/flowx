@@ -1,22 +1,36 @@
-import Flowx from "./lib/index.js"
+import Flowx from "./lib/flowx.js"
 
 const $ = document.querySelector.bind(document)
 
-window.flowx = new Flowx(
-  $("#canvas"), // 主画布
-  (data, containerEl) => {
+window.flowx = new Flowx({
+  canvasElement: $("#canvas"), // 主画布
+  onRender: (data, containerEl) => {
     return new Promise((res, rej) => {
       new Vue({
         el: containerEl,
-        template: "<div>Vue {{ a }}</div>",
-        data,
+        template: `
+          <div>
+          <div>{{ id }}</div>
+          <button @click="onClick">click me</button>
+          </div>
+        `,
+        data() {
+          return {
+            id: 1,
+          }
+        },
+        methods: {
+          onClick() {
+            this.id++
+          },
+        },
         mounted() {
           res()
         },
       })
     })
   },
-)
+})
 
 $(".clear").addEventListener("click", async () => {
   await flowx.setState([])

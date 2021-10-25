@@ -4,13 +4,14 @@
 
 - 参数收进 opt 中 [Done]
 - replace nodeSize with nodeWidth, nodeHeight [Done]
-- containerEl 的宽高要保持固定 [Done]
 - checkAttach(elA, elB) [Done]
 - 用 vite 去跑 demo [Done]
 - 用 esbuild 打包 [Done]
+- containerEl 的宽高要保持固定 [Done]
 - 调研一下 svg 是否可以固定大小 [Done] 可以
 - 垂直方向滚动条问题 [Done]
 
+- esbuild 将 CSS 打包成 JS 的形式
 - 子树的拖拽
 
 ## Design
