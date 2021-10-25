@@ -6,7 +6,7 @@
   "module": "dist/flowx.esm.js",
   "scripts": {
     "dev": "vite",
-    "build": "rollup -c"
+    "build": "esbuild lib/index.js --bundle --minify --outfile=dist/flowx.esm.js"
   },
   "files": [
     "dist"
@@ -15,9 +15,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "21.0.1",
-    "@rollup/plugin-node-resolve": "13.0.6",
-    "rollup": "2.58.0",
+    "esbuild": "0.13.9",
     "vite": "2.6.10"
   },
   "dependencies": {

@@ -7,7 +7,7 @@
 - containerEl 的宽高要保持固定 [Done]
 - checkAttach(elA, elB) [Done]
 - 用 vite 去跑 demo [Done]
-- 用 esbuild 打包
+- 用 esbuild 打包 [Done]
 - 调研一下 svg 是否可以固定大小
 - 垂直方向滚动条问题
 

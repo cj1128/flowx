@@ -1,4 +1,4 @@
-import Flowx from "./dist/flowx.esm.js"
+import Flowx from "./lib/index.js"
 
 const $ = document.querySelector.bind(document)
 
