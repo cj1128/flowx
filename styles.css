@@ -387,7 +387,6 @@ html {
   top: 71px;
   left: 361px;
   z-index: 0;
-  overflow: auto;
 }
 #propwrap {
   position: absolute;

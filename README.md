@@ -8,8 +8,8 @@
 - checkAttach(elA, elB) [Done]
 - 用 vite 去跑 demo [Done]
 - 用 esbuild 打包 [Done]
-- 调研一下 svg 是否可以固定大小
-- 垂直方向滚动条问题
+- 调研一下 svg 是否可以固定大小 [Done] 可以
+- 垂直方向滚动条问题 [Done]
 
 - 子树的拖拽
 
