@@ -6,7 +6,7 @@
   "module": "dist/flowx.esm.js",
   "scripts": {
     "dev": "vite",
-    "build": "esbuild lib/flowx.js --format=esm --bundle --minify --outfile=dist/flowx.esm.js"
+    "build": "node build.js"
   },
   "files": [
     "dist"
@@ -16,6 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "esbuild": "0.13.9",
+    "esbuild-plugin-inline-css": "0.0.1",
     "vite": "2.6.10"
   },
   "dependencies": {
