@@ -10,13 +10,32 @@ window.flowx = new Flowx({
         el: containerEl,
         template: `
           <div>
-          <div>{{ id }}</div>
-          <button @click="onClick">click me</button>
+            <div>
+              <label for="cars">rule</label>
+              <select v-model="rule">
+                <option value="1">rule1</option>
+                <option value="2">rule2</option>
+                <option value="3">rule3</option>
+                <option value="4">rule4</option>
+              </select>
+            </div>
+
+            <div>
+              <label>
+                triggered
+                <input type="radio" :value="true" v-model="triggered">
+              </label>
+              <label>
+                not triggered
+                <input type="radio" :value="false" v-model="triggered">
+              </label>
+            </div>
           </div>
         `,
         data() {
           return {
-            id: 1,
+            rule: data.id || "1",
+            triggered: true,
           }
         },
         methods: {

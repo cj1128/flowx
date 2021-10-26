@@ -14,6 +14,11 @@
 - esbuild 将 CSS 打包成 JS 的形式 [Done]
 - 子树的拖拽 [Done]
 
+- cursor 在 canvas 中应该是 hand
+- 拖动时只 copy 有必要的节点
+- 拖动节点及其子节点 不能作为放置目标
+- 修复 click 时的 bug
+
 ## Design
 
 - 用户拖动 handle，cloneNode 一下
