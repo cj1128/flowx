@@ -1,5 +1,6 @@
 body,
-html {
+html,
+#app {
   margin: 0px;
   padding: 0px;
   overflow: hidden;
@@ -52,6 +53,7 @@ html {
   margin-top: 5px;
 }
 #leftside {
+  margin-top: 10px;
   display: inline-block;
   vertical-align: middle;
   margin-left: 20px;
