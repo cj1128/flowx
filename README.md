@@ -12,7 +12,7 @@
 - 垂直方向滚动条问题 [Done]
 
 - esbuild 将 CSS 打包成 JS 的形式 [Done]
-- 子树的拖拽
+- 子树的拖拽 [Done]
 
 ## Design
 

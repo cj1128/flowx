@@ -72,5 +72,12 @@ document.querySelector(".set-state").addEventListener("click", () => {
         a: "3",
       },
     },
+    {
+      id: 4,
+      parent: 2,
+      data: {
+        a: "4",
+      },
+    },
   ])
 })
