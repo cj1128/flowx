@@ -11,6 +11,10 @@
   cursor: move;
 }
 
+.flowx-block--copy {
+  cursor: copy;
+}
+
 .flowx-link {
   fill: none;
   stroke: #ccc;
