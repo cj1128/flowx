@@ -1,5 +1,5 @@
 {
-  "name": "flowx",
+  "name": "@cjting/flowx",
   "version": "0.1.0",
   "description": "",
   "main": "dist/flowx.esm.js",
@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "node build.js",
+    "pub": "npm run build && npm pub --access public",
     "buildDemo": "vite build --outDir ../docs --base ./ demo"
   },
   "files": [
@@ -18,10 +19,8 @@
   "devDependencies": {
     "esbuild": "0.13.9",
     "esbuild-plugin-inline-css": "0.0.1",
-    "vite": "2.6.10"
-  },
-  "dependencies": {
     "d3-hierarchy": "3.0.1",
-    "d3-selection": "3.0.0"
+    "d3-selection": "3.0.0",
+    "vite": "2.6.10"
   }
 }
