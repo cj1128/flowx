@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+    />
+    <style>
+      #redpoint {
+        width: 5px;
+        height: 5px;
+        background-color: red;
+        position: fixed;
+        top: 100px;
+        left: 500px;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index.99c8745a.js"></script>
+    <link rel="modulepreload" href="/assets/vendor.038ccdfb.js">
+    <link rel="stylesheet" href="/assets/index.8073045c.css">
+  </head>
+  <body>
+    <div id="app">
+      <div id="navigation">
+        <div id="leftside">
+          <div id="details">
+            <div id="names">
+              <p id="title">Decision Tree Demo</p>
+
+              <ul>
+                <li>在画布区按住鼠标移动画布</li>
+                <li>按住 alt 拖动节点进行复制</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="buttonsright">
+          <div id="publish" class="clear" @click="clear">Clear Tree</div>
+        </div>
+      </div>
+
+      <div id="leftcard">
+        <p id="header">Rules</p>
+
+        <div id="subnav"></div>
+
+        <div id="blocklist">
+          <div
+            v-for="id in 10"
+            class="blockelem flowx-drag noselect"
+            :data-flowx-id="id"
+          >
+            <div class="blockin">
+              <div class="blockico">
+                <span></span>
+                <img src="/assets/eye.784c2fea.svg" />
+              </div>
+
+              <div class="blocktext">
+                <p class="blocktitle">Rule{{id}}</p>
+                <p class="blockdesc">this is rule {{ id }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="propwrap">
+        <div id="properties">
+          <div id="close">
+            <img src="/assets/close.e36e805c.svg" />
+          </div>
+          <p id="header2">Properties</p>
+          <div id="propswitch">
+            <div id="dataprop">Data</div>
+            <div id="alertprop">Alerts</div>
+            <div id="logsprop">Logs</div>
+          </div>
+          <div id="proplist">
+            <p class="inputlabel">Select database</p>
+            <div class="dropme">
+              Database 1
+              <img src="/assets/dropdown.e0bba9f6.svg" />
+            </div>
+            <p class="inputlabel">Check properties</p>
+            <div class="dropme">
+              All
+              <img src="/assets/dropdown.e0bba9f6.svg" />
+            </div>
+            <div class="checkus">
+              <img src="/assets/checkon.5e920b7a.svg" />
+              <p>Log on successful performance</p>
+            </div>
+            <div class="checkus">
+              <img src="/assets/checkoff.88720a7c.svg" />
+              <p>Give priority to this block</p>
+            </div>
+          </div>
+          <div id="divisionthing"></div>
+          <div id="removeblock">Delete blocks</div>
+        </div>
+      </div>
+      <div id="canvas"></div>
+
+      <el-drawer title="Rule Detail" :visible.sync="drawer">
+        <span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          finibus viverra lorem nec porta. Praesent nec posuere magna. Aenean
+          vulputate pulvinar porta. Integer consectetur sem urna, vel imperdiet
+          magna laoreet et. Duis condimentum dictum vulputate. Mauris a pulvinar
+          tortor, eget rhoncus eros. Morbi egestas pulvinar justo, sit amet
+          accumsan neque venenatis nec. Cras luctus nec urna sed accumsan.
+          Vivamus commodo nisl eget felis posuere sagittis. Cras lobortis nisl
+          vitae felis auctor, ut ullamcorper nisi placerat. Fusce id metus ac
+          ipsum mollis tristique id at erat. Nulla facilisi. Sed semper accumsan
+          dui vulputate auctor.
+        </span>
+      </el-drawer>
+    </div>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  
+</html>

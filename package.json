@@ -1,11 +1,27 @@
 {
   "name": "flowx",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/flowx.esm.js",
+  "module": "dist/flowx.esm.js",
   "scripts": {
+    "dev": "vite",
+    "build": "node build.js",
+    "buildDemo": "vite build --outDir ../docs demo"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "0.13.9",
+    "esbuild-plugin-inline-css": "0.0.1",
+    "vite": "2.6.10"
+  },
+  "dependencies": {
+    "d3-hierarchy": "3.0.1",
+    "d3-selection": "3.0.0"
+  }
 }
