@@ -6,7 +6,8 @@
   "module": "dist/flowx.esm.js",
   "scripts": {
     "dev": "vite",
-    "build": "node build.js"
+    "build": "node build.js",
+    "buildDemo": "vite build --outDir ../docs demo"
   },
   "files": [
     "dist"

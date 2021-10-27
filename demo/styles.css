@@ -4,14 +4,19 @@ html,
   margin: 0px;
   padding: 0px;
   overflow: hidden;
-  background-image: url(assets/tile.png);
+  background-image: url(./assets/tile.png);
   background-repeat: repeat;
   background-size: 30px 30px;
   background-color: #fbfbfb;
   height: 100%;
 }
+
+.flowx-block {
+  user-select: none;
+}
+
 #navigation {
-  height: 71px;
+  height: 122px;
   background-color: #fff;
   border: 1px solid #e8e8ef;
   width: 100%;
@@ -21,6 +26,7 @@ html,
   top: 0;
   z-index: 9;
 }
+
 #back {
   width: 40px;
   height: 40px;
@@ -40,14 +46,12 @@ html,
   vertical-align: top;
 }
 #title {
-  font-family: Roboto;
   font-weight: 500;
   font-size: 16px;
   color: #393c44;
   margin-bottom: 0px;
 }
 #subtitle {
-  font-family: Roboto;
   color: #808292;
   font-size: 14px;
   margin-top: 5px;
@@ -72,14 +76,12 @@ html,
   height: 39px;
   line-height: 39px;
   border-radius: 5px 0px 0px 5px;
-  font-family: Roboto;
   color: #393c44;
   display: inline-block;
   font-size: 14px;
   text-align: center;
 }
 #rightswitch {
-  font-family: Roboto;
   color: #808292;
   border-radius: 0px 5px 5px 0px;
   border: 1px solid #e8e8ef;
@@ -92,7 +94,6 @@ html,
   margin-left: -5px;
 }
 #discard {
-  font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
   color: #a6a6b3;
@@ -111,7 +112,6 @@ html,
   opacity: 0.7;
 }
 #publish {
-  font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
   color: #fff;
@@ -140,7 +140,7 @@ html,
   background-color: #fff;
   border: 1px solid #e8e8ef;
   box-sizing: border-box;
-  padding-top: 85px;
+  padding-top: 125px;
   padding-left: 20px;
   height: 100%;
   position: absolute;
@@ -155,7 +155,6 @@ html,
   box-shadow: 0px 2px 8px rgba(34, 34, 87, 0.05);
   border-radius: 5px;
   text-indent: 35px;
-  font-family: Roboto;
   font-size: 16px;
 }
 ::-webkit-input-placeholder {
@@ -179,7 +178,6 @@ html,
 }
 #header {
   font-size: 20px;
-  font-family: Roboto;
   font-weight: bold;
   color: #393c44;
 }
@@ -201,7 +199,6 @@ html,
 }
 #triggers {
   margin-left: 20px;
-  font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
   text-align: center;
@@ -222,7 +219,6 @@ html,
 }
 #actions {
   display: inline-block;
-  font-family: Roboto;
   font-weight: 500;
   color: #808292;
   font-size: 14px;
@@ -235,7 +231,6 @@ html,
 #loggers {
   width: calc(88% / 3);
   display: inline-block;
-  font-family: Roboto;
   font-weight: 500;
   color: #808292;
   font-size: 14px;
@@ -254,7 +249,6 @@ html,
   height: 67px;
   box-sizing: border-box;
   background-color: #fff;
-  font-family: Roboto;
   font-size: 14px;
 }
 #footer a {
@@ -350,14 +344,12 @@ html,
 .blocktitle {
   margin: 0px !important;
   padding: 0px !important;
-  font-family: Roboto;
   font-weight: 500;
   font-size: 16px;
   color: #393c44;
 }
 .blockdesc {
   margin-top: 5px;
-  font-family: Roboto;
   color: #808292;
   font-size: 14px;
   line-height: 21px;
@@ -385,8 +377,8 @@ html,
 #canvas {
   position: absolute;
   width: calc(100% - 361px);
-  height: calc(100% - 71px);
-  top: 71px;
+  height: calc(100% - 122px);
+  top: 122px;
   left: 361px;
   z-index: 0;
 }
@@ -424,7 +416,6 @@ html,
 }
 #header2 {
   font-size: 20px;
-  font-family: Roboto;
   font-weight: bold;
   color: #393c44;
   margin-top: 101px;
@@ -448,7 +439,6 @@ html,
   margin-bottom: 30px;
 }
 #dataprop {
-  font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
   text-align: center;
@@ -470,7 +460,6 @@ html,
 }
 #alertprop {
   display: inline-block;
-  font-family: Roboto;
   font-weight: 500;
   color: #808292;
   font-size: 14px;
@@ -483,7 +472,6 @@ html,
 #logsprop {
   width: calc(88% / 3);
   display: inline-block;
-  font-family: Roboto;
   font-weight: 500;
   color: #808292;
   font-size: 14px;
@@ -492,7 +480,6 @@ html,
   text-align: center;
 }
 .inputlabel {
-  font-family: Roboto;
   font-size: 14px;
   color: #253134;
 }
@@ -501,7 +488,6 @@ html,
   border-radius: 5px;
   border: 1px solid #e8e8ef;
   box-shadow: 0px 2px 8px rgba(34, 34, 87, 0.05);
-  font-family: Roboto;
   font-size: 14px;
   color: #253134;
   text-indent: 20px;
@@ -524,7 +510,6 @@ html,
 }
 .checkus p {
   display: inline-block;
-  font-family: Roboto;
   font-size: 14px;
   vertical-align: middle;
   margin-left: 10px;
@@ -541,7 +526,6 @@ html,
   border-radius: 5px;
   position: absolute;
   bottom: 20px;
-  font-family: Roboto;
   font-size: 14px;
   text-align: center;
   width: 287px;
@@ -565,7 +549,6 @@ html,
                                   supported by Chrome, Opera and Firefox */
 }
 .blockyname {
-  font-family: Roboto;
   font-weight: 500;
   color: #253134;
   display: inline-block;
@@ -608,7 +591,6 @@ html,
   background-color: #e9e9ef;
 }
 .blockyinfo {
-  font-family: Roboto;
   font-size: 14px;
   color: #808292;
   margin-top: 15px;

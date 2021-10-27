@@ -1,13 +1,13 @@
 .flowx-dragging {
   position: absolute;
-  z-index: 10;
+  z-index: 40;
 }
 
 .flowx-block {
   position: absolute;
   overflow: auto;
   border: 2px solid transparent;
-  z-index: 9;
+  z-index: 20;
   cursor: move;
 }
 

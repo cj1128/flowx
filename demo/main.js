@@ -1,4 +1,4 @@
-import Flowx from "./lib/flowx.js"
+import Flowx from "../lib/flowx.js"
 
 const $ = document.querySelector.bind(document)
 
@@ -25,21 +25,27 @@ new Vue({
                 style="height: 100%; width: 100%;"
                 @dblclick="openDrawer"
               >
-                <div>
+                <div style="padding: 10px 0;">
                   <label for="cars">rule</label>
-                  <select v-model="rule">
-                    <option value="1">rule1</option>
-                    <option value="2">rule2</option>
-                    <option value="3">rule3</option>
-                    <option value="4">rule4</option>
+
+                  <select v-model="rule" style="font-size: 25px;font-weight:bold">
+                    <option 
+                      v-for="i in 10"
+                      :value="i"
+                    >
+                      rule{{i}}
+                    </option>
                   </select>
                 </div>
 
-                <div>
+                <div @mousedown.stop>
                   <label>
                     triggered
                     <input type="radio" :value="true" v-model="triggered">
                   </label>
+
+                  &nbsp;&nbsp;&nbsp;
+
                   <label>
                     not triggered
                     <input type="radio" :value="false" v-model="triggered">
