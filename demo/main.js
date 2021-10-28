@@ -91,7 +91,7 @@ new Vue({
 
 window.test_blocks = [
   {
-    id: 0,
+    id: "0",
     parent: "",
     left: 200,
     top: 300,
@@ -100,15 +100,15 @@ window.test_blocks = [
     },
   },
   {
-    id: 1,
-    parent: 0,
+    id: "1",
+    parent: "0",
     data: {
       a: "1",
     },
   },
   {
-    id: 2,
-    parent: 0,
+    id: "2",
+    parent: "0",
     data: {
       a: "2",
     },
