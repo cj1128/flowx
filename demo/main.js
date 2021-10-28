@@ -29,7 +29,7 @@ new Vue({
                   <label for="cars">rule</label>
 
                   <select v-model="rule" style="font-size: 25px;font-weight:bold">
-                    <option 
+                    <option
                       v-for="i in 10"
                       :value="i"
                     >
@@ -88,3 +88,29 @@ new Vue({
     },
   },
 })
+
+window.test_blocks = [
+  {
+    id: 0,
+    parent: "",
+    left: 200,
+    top: 300,
+    data: {
+      a: "0",
+    },
+  },
+  {
+    id: 1,
+    parent: 0,
+    data: {
+      a: "1",
+    },
+  },
+  {
+    id: 2,
+    parent: 0,
+    data: {
+      a: "2",
+    },
+  },
+]
