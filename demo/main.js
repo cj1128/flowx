@@ -38,7 +38,7 @@ new Vue({
                   </select>
                 </div>
 
-                <div @mousedown.stop>
+                <div @mousedown.stop style="cursor:auto">
                   <label>
                     triggered
                     <input type="radio" :value="true" v-model="triggered">
