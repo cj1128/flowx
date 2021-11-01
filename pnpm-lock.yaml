@@ -7,11 +7,9 @@ specifiers:
   esbuild-plugin-inline-css: 0.0.1
   vite: 2.6.10
 
-dependencies:
+devDependencies:
   d3-hierarchy: 3.0.1
   d3-selection: 3.0.0
-
-devDependencies:
   esbuild: 0.13.9
   esbuild-plugin-inline-css: 0.0.1
   vite: 2.6.10
@@ -29,12 +27,12 @@ packages:
   /d3-hierarchy/3.0.1:
     resolution: {integrity: sha512-RlLTaofEoOrMK1JoXYIGhKTkJFI/6rFrYPgxy6QlZo2BcVc4HGTqEU0rPpzuMq5T/5XcMtAzv1XiLA3zRTfygw==}
     engines: {node: '>=12'}
-    dev: false
+    dev: true
 
   /d3-selection/3.0.0:
     resolution: {integrity: sha512-fmTRWbNMmsmWq6xJV8D19U/gw/bwrHfNXxrIN+HfZgnzqTHp9jOmKMhsTUjXOJnZOdZY9Q28y4yebKzqDKlxlQ==}
     engines: {node: '>=12'}
-    dev: false
+    dev: true
 
   /esbuild-android-arm64/0.13.9:
     resolution: {integrity: sha512-Ty0hKldtjJVLHwUwbKR4GFPiXBo5iQ3aE1OLBar9lh3myaRkUGEb+Ypl74LEKa0+t/9lS3Ev1N5+5P2Sq6UvNQ==}

@@ -1,11 +1,11 @@
 {
   "name": "@cjting/flowx",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "dist/flowx.esm.js",
   "module": "dist/flowx.esm.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --base ./ demo",
     "build": "node build.js",
     "pub": "npm run build && npm pub --access public",
     "buildDemo": "vite build --outDir ../docs --base ./ demo"
