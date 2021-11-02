@@ -16,9 +16,9 @@ new Vue({
 
     window.flowx = new Flowx({
       canvasElement: $("#canvas"), // 主画布
-      onRender: (data, containerEl) => {
+      onRender: ({ data, id, isRoot }, containerEl) => {
         return new Promise((res, rej) => {
-          new Vue({
+          data.__vm = new Vue({
             el: containerEl,
             template: `
               <div
@@ -36,6 +36,8 @@ new Vue({
                       rule{{i}}
                     </option>
                   </select>
+
+                  <button @click="onDelete" v-if="!isRoot">delete</button>
                 </div>
 
                 <div @mousedown.stop style="cursor:auto">
@@ -53,6 +55,7 @@ new Vue({
                 </div>
               </div>
             `,
+
             data() {
               return {
                 rule: data.id || "1",
@@ -60,7 +63,16 @@ new Vue({
                 drawer: true,
               }
             },
+
+            computed: {
+              isRoot: () => isRoot,
+            },
+
             methods: {
+              onDelete() {
+                flowx.removeNode(id)
+              },
+
               onClick() {
                 this.id++
               },
@@ -74,6 +86,9 @@ new Vue({
             },
           })
         })
+      },
+      onRemoveNode(data) {
+        data.__vm.$destroy()
       },
     })
   },
