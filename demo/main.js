@@ -78,10 +78,6 @@ new Vue({
                 flowx.removeSubTree(id)
               },
 
-              onClick() {
-                this.id++
-              },
-
               openDrawer() {
                 self.openDrawer()
               },
@@ -92,7 +88,7 @@ new Vue({
           })
         })
       },
-      onRemoveNode(data) {
+      onRemove(data) {
         data.__vm.$destroy()
       },
     })
@@ -109,28 +105,19 @@ new Vue({
   },
 })
 
-window.test_blocks = [
-  {
-    id: "0",
-    parent: "",
-    left: 200,
-    top: 300,
-    data: {
-      a: "0",
-    },
-  },
-  {
-    id: "1",
-    parent: "0",
-    data: {
-      a: "1",
-    },
-  },
-  {
-    id: "2",
-    parent: "0",
-    data: {
-      a: "2",
-    },
-  },
-]
+let _zoom = 1
+
+$("#zoom-in").addEventListener("click", () => {
+  _zoom += 0.1
+  flowx.zoom(_zoom)
+})
+
+$("#zoom-out").addEventListener("click", () => {
+  _zoom -= 0.1
+  flowx.zoom(_zoom)
+})
+
+$("#reset-zoom").addEventListener("click", () => {
+  _zoom = 1
+  flowx.zoom(_zoom)
+})
