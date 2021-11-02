@@ -2,6 +2,13 @@ import Flowx from "../lib/flowx.js"
 
 const $ = document.querySelector.bind(document)
 
+const nodeWidth = 320
+const nodeHeight = 80
+const marginX = 50
+const marginY = 20
+
+let _zoom = 1
+
 new Vue({
   el: "#app",
 
@@ -16,6 +23,10 @@ new Vue({
 
     window.flowx = new Flowx({
       canvasElement: $("#canvas"), // 主画布
+      nodeWidth,
+      nodeHeight,
+      marginX,
+      marginY,
       onRender: ({ data, id, isRoot }, containerEl) => {
         return new Promise((res, rej) => {
           data.__vm = new Vue({
@@ -23,6 +34,7 @@ new Vue({
             template: `
               <div
                 style="height: 100%; width: 100%;"
+                :style="{zoom}"
                 @dblclick="openDrawer"
               >
                 <div style="padding: 10px 0;">
@@ -62,6 +74,7 @@ new Vue({
                 rule: data.id || "1",
                 triggered: true,
                 drawer: true,
+                zoom: 1,
               }
             },
 
@@ -78,10 +91,6 @@ new Vue({
                 flowx.removeSubTree(id)
               },
 
-              onClick() {
-                this.id++
-              },
-
               openDrawer() {
                 self.openDrawer()
               },
@@ -94,6 +103,9 @@ new Vue({
       },
       onRemoveNode(data) {
         data.__vm.$destroy()
+      },
+      onResizeNode(data) {
+        data.__vm.zoom = _zoom
       },
     })
   },
@@ -109,28 +121,25 @@ new Vue({
   },
 })
 
-window.test_blocks = [
-  {
-    id: "0",
-    parent: "",
-    left: 200,
-    top: 300,
-    data: {
-      a: "0",
-    },
-  },
-  {
-    id: "1",
-    parent: "0",
-    data: {
-      a: "1",
-    },
-  },
-  {
-    id: "2",
-    parent: "0",
-    data: {
-      a: "2",
-    },
-  },
-]
+const scale = (x) => {
+  flowx.resize({
+    nodeHeight: nodeHeight * x,
+    nodeWidth: nodeWidth * x,
+    marginX: marginX * x,
+    marginY: marginY * x,
+  })
+}
+
+$("#zoom-in").addEventListener("click", () => {
+  _zoom += 0.1
+  scale(_zoom)
+})
+$("#zoom-out").addEventListener("click", () => {
+  if (_zoom <= 0.1) return
+  _zoom -= 0.1
+  scale(_zoom)
+})
+$("#reset-zoom").addEventListener("click", () => {
+  _zoom = 1
+  scale(_zoom)
+})

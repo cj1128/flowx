@@ -133,7 +133,14 @@ html,
 }
 #buttonsright {
   float: right;
+  display: flex;
+  flex-direction: column;
   margin-top: 15px;
+}
+.resize {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 #leftcard {
   width: 363px;
