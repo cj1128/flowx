@@ -1,6 +1,6 @@
 {
   "name": "@cjting/flowx",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "",
   "main": "dist/flowx.esm.js",
   "module": "dist/flowx.esm.js",

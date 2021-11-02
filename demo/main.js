@@ -106,14 +106,17 @@ new Vue({
 })
 
 let _zoom = 1
+
 $("#zoom-in").addEventListener("click", () => {
   _zoom += 0.1
   flowx.zoom(_zoom)
 })
+
 $("#zoom-out").addEventListener("click", () => {
   _zoom -= 0.1
   flowx.zoom(_zoom)
 })
+
 $("#reset-zoom").addEventListener("click", () => {
   _zoom = 1
   flowx.zoom(_zoom)
