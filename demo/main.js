@@ -37,7 +37,8 @@ new Vue({
                     </option>
                   </select>
 
-                  <button @click="onDelete" v-if="!isRoot">delete</button>
+                  <button @click="onDelete" v-if="!isRoot" style="margin-right: 8px;">delete one</button>
+                  <button @click="onDeleteSub">delete sub</button>
                 </div>
 
                 <div @mousedown.stop style="cursor:auto">
@@ -71,6 +72,10 @@ new Vue({
             methods: {
               onDelete() {
                 flowx.removeNode(id)
+              },
+
+              onDeleteSub() {
+                flowx.removeSubTree(id)
               },
 
               onClick() {
