@@ -20,3 +20,7 @@
   stroke: #ccc;
   stroke-width: 1.5px;
 }
+
+.flowx-drag * {
+  -webkit-user-drag: none;
+}
