@@ -54,22 +54,17 @@
 
         <div id="subnav"></div>
 
-        <div id="blocklist">
+        <div>
           <div
             v-for="id in 10"
-            class="blockelem flowx-drag noselect"
+            class="item flowx-drag noselect"
             :data-flowx-id="id"
           >
-            <div class="blockin">
-              <div class="blockico">
-                <span></span>
-                <img src="assets/eye.svg" />
-              </div>
+            <img src="assets/eye.svg" />
 
-              <div class="blocktext">
-                <p class="blocktitle">Rule{{id}}</p>
-                <p class="blockdesc">this is rule {{ id }}</p>
-              </div>
+            <div class="item__content">
+              <p class="blocktitle">Rule{{id}}</p>
+              <p class="blockdesc">this is rule {{ id }}</p>
             </div>
           </div>
         </div>
