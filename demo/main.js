@@ -24,7 +24,7 @@ new Vue({
             el: containerEl,
             template: `
               <div
-                style="height: 140px; width: 380px;"
+                style="height: 100%; width: 100%;"
                 @dblclick="openDrawer"
               >
                 <div style="padding: 10px 0;">
