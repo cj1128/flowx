@@ -18,6 +18,7 @@ new Vue({
       canvasElement: $("#canvas"), // 主画布
       nodeWidth: 380,
       nodeHeight: 140,
+      borderColor: "red",
       onRender: ({ data, id, isRoot }, containerEl) => {
         return new Promise((res, rej) => {
           data.__vm = new Vue({
