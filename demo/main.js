@@ -16,29 +16,28 @@ new Vue({
 
     window.flowx = new Flowx({
       canvasElement: $("#canvas"), // 主画布
+      nodeWidth: 380,
+      nodeHeight: 140,
       onRender: ({ data, id, isRoot }, containerEl) => {
         return new Promise((res, rej) => {
           data.__vm = new Vue({
             el: containerEl,
             template: `
               <div
-                style="height: 100%; width: 100%;"
+                style="height: 140px; width: 380px;"
                 @dblclick="openDrawer"
               >
                 <div style="padding: 10px 0;">
                   <label for="cars">rule</label>
 
-                  <select v-model="rule" style="font-size: 25px;font-weight:bold">
-                    <option
-                      v-for="i in 10"
-                      :value="i"
-                    >
-                      rule{{i}}
-                    </option>
-                  </select>
-
-                  <button @click="onDelete" v-if="!isRoot" style="margin-right: 8px;">delete one</button>
-                  <button @click="onDeleteSub">delete sub</button>
+                  <el-select v-model="rule" placeholder="请选择" @mousedown.native.stop>
+                    <el-option
+                      v-for="item in 10"
+                      :key="item"
+                      :label="item"
+                      :value="item">
+                    </el-option>
+                  </el-select>
                 </div>
 
                 <div @mousedown.stop style="cursor:auto">
@@ -53,6 +52,11 @@ new Vue({
                     not triggered
                     <input type="radio" :value="false" v-model="triggered">
                   </label>
+                </div>
+
+                <div style="display: flex; padding: 10px 0;">
+                  <button @click="onDelete" v-if="!isRoot" style="margin-right: 8px;">delete one</button>
+                  <button @click="onDeleteSub">delete sub</button>
                 </div>
               </div>
             `,
