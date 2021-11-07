@@ -64,7 +64,13 @@
 
             <div class="item__content">
               <p class="blocktitle">Rule{{id}}</p>
-              <p class="blockdesc">this is rule {{ id }}</p>
+              <p class="blockdesc" v-if="id === 10">
+                this node can not be root
+              </p>
+              <p class="blockdesc" v-else-if="id === 9">
+                this node can not follow 6
+              </p>
+              <p class="blockdesc" v-else>this is rule {{ id }}</p>
             </div>
           </div>
         </div>
