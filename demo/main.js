@@ -19,6 +19,33 @@ new Vue({
       nodeWidth: 380,
       nodeHeight: 140,
       borderColor: "red",
+      shouldUpdate(newTree, oldTree) {
+        // restriction 1. rule10 can not be the root
+        if (newTree.data.id === "10") {
+          Vue.prototype.$message("rule10 can not be root")
+          return false
+        }
+
+        // restriction 2. rule9 can not follow rule6
+        {
+          function check(node) {
+            if (node.data.id === "6") {
+              if (node.children.some((b) => b.data.id === "9")) {
+                return true
+              }
+            }
+
+            return node.children.some((n) => check(n))
+          }
+
+          if (check(newTree)) {
+            Vue.prototype.$message("rule9 can not follow rule6")
+            return false
+          }
+        }
+
+        return true
+      },
       onRender: ({ data, id, isRoot }, containerEl) => {
         return new Promise((res, rej) => {
           data.__vm = new Vue({
