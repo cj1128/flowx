@@ -8,7 +8,7 @@
     "dev": "vite --base ./ demo",
     "build": "node build.js",
     "pub": "npm run build && npm pub --access public",
-    "buildDemo": "vite build --outDir ../docs --base ./ demo"
+    "buildDemo": "vite build --outDir ../demo-dist --base ./ demo"
   },
   "files": [
     "dist"
