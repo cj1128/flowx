@@ -6,7 +6,6 @@
 .flowx-block {
   position: absolute;
   overflow: auto;
-  border: 2px solid transparent;
   z-index: 20;
   cursor: move;
 }
