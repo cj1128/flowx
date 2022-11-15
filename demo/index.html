@@ -2,137 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link href="./styles.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" href="data:;base64,=" />
-    <title>Flowx Demo</title>
     <meta
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
-    />
-    <style>
-      #redpoint {
-        width: 5px;
-        height: 5px;
-        background-color: red;
-        position: fixed;
-        top: 100px;
-        left: 500px;
-      }
-    </style>
+    <title>Flowx Demo</title>
   </head>
   <body>
-    <div id="app">
-      <div id="navigation">
-        <div id="leftside">
-          <div id="details">
-            <div id="names">
-              <p id="title">Decision Tree Demo</p>
-
-              <ul>
-                <li>在画布区按住鼠标移动画布</li>
-                <li>按住 alt 拖动节点进行复制</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div id="buttonsright">
-          <div id="publish" class="clear" @click="clear">Clear Tree</div>
-
-          <div class="resize">
-            <button id="zoom-in">+</button>
-            <button id="zoom-out">-</button>
-            <button id="reset-zoom">reset</button>
-          </div>
-        </div>
-      </div>
-
-      <div id="leftcard">
-        <p id="header">Rules</p>
-
-        <div id="subnav"></div>
-
-        <div>
-          <div
-            v-for="id in 10"
-            class="item flowx-drag noselect"
-            :data-flowx-id="id"
-          >
-            <img src="assets/eye.svg" />
-
-            <div class="item__content">
-              <p class="blocktitle">Rule{{id}}</p>
-              <p class="blockdesc" v-if="id === 10">
-                this node can not be root
-              </p>
-              <p class="blockdesc" v-else-if="id === 9">
-                this node can not follow 6
-              </p>
-              <p class="blockdesc" v-else>this is rule {{ id }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="propwrap">
-        <div id="properties">
-          <div id="close">
-            <img src="assets/close.svg" />
-          </div>
-          <p id="header2">Properties</p>
-          <div id="propswitch">
-            <div id="dataprop">Data</div>
-            <div id="alertprop">Alerts</div>
-            <div id="logsprop">Logs</div>
-          </div>
-          <div id="proplist">
-            <p class="inputlabel">Select database</p>
-            <div class="dropme">
-              Database 1
-              <img src="assets/dropdown.svg" />
-            </div>
-            <p class="inputlabel">Check properties</p>
-            <div class="dropme">
-              All
-              <img src="assets/dropdown.svg" />
-            </div>
-            <div class="checkus">
-              <img src="assets/checkon.svg" />
-              <p>Log on successful performance</p>
-            </div>
-            <div class="checkus">
-              <img src="assets/checkoff.svg" />
-              <p>Give priority to this block</p>
-            </div>
-          </div>
-          <div id="divisionthing"></div>
-          <div id="removeblock">Delete blocks</div>
-        </div>
-      </div>
-      <div id="canvas"></div>
-
-      <el-drawer title="Rule Detail" :visible.sync="drawer">
-        <span>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-          finibus viverra lorem nec porta. Praesent nec posuere magna. Aenean
-          vulputate pulvinar porta. Integer consectetur sem urna, vel imperdiet
-          magna laoreet et. Duis condimentum dictum vulputate. Mauris a pulvinar
-          tortor, eget rhoncus eros. Morbi egestas pulvinar justo, sit amet
-          accumsan neque venenatis nec. Cras luctus nec urna sed accumsan.
-          Vivamus commodo nisl eget felis posuere sagittis. Cras lobortis nisl
-          vitae felis auctor, ut ullamcorper nisi placerat. Fusce id metus ac
-          ipsum mollis tristique id at erat. Nulla facilisi. Sed semper accumsan
-          dui vulputate auctor.
-        </span>
-      </el-drawer>
-    </div>
+    <div id="app"></div>
+    <script src="./main.js" type="module"></script>
   </body>
-
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-  <script src="./main.js" type="module"></script>
 </html>

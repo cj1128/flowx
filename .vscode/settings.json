@@ -1,3 +1,49 @@
 {
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "search.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "tmp": true
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "stylusSupremacy.insertBraces": false,
+  "stylusSupremacy.insertSemicolons": false,
+  "[stylus]": {
+    "editor.defaultFormatter": "thisismanta.stylus-supremacy"
+  },
+  "todohighlight.keywords": [
+    {
+      "text": "NOTE:",
+      "color": "#fff",
+      "backgroundColor": "green",
+      "overviewRulerColor": "grey",
+      "regex": {
+        "pattern": "(?<=\\s)NOTE(\\(\\w+\\))?:"
+      }
+    },
+    {
+      "text": "TODO:",
+      "color": "#fff",
+      "backgroundColor": "#ffbd2a",
+      "overviewRulerColor": "rgba(255, 189, 42, 0.8)",
+      "regex": {
+        "pattern": "TODO(\\(\\w+\\))?:"
+      }
+    }
+  ]
 }

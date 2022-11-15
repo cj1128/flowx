@@ -1,0 +1,15 @@
+{
+  "tabWidth": 2,
+  "semi": false,
+  "arrowParens": "avoid",
+  "useTabs": false,
+  "quoteProps": "as-needed",
+  "bracketSpacing": true,
+  "singleQuote": true,
+  "htmlWhitespaceSensitivity": "css",
+  "vueIndentScriptAndStyle": false,
+  "printWidth": 80,
+  "trailingComma": "es5",
+  "pugWrapAttributesThreshold": 1,
+  "pugAttributeSeparator": "none"
+}
