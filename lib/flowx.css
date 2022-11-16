@@ -5,9 +5,14 @@
 
 .flowx-block {
   position: absolute;
-  overflow: auto;
   z-index: 20;
   cursor: move;
+}
+
+.flowx-prefix {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .flowx-block--copy {

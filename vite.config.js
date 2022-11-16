@@ -1,18 +1,26 @@
-import vue from "@vitejs/plugin-vue2"
-import { defineConfig } from "vite"
-import WindiCSS from "vite-plugin-windicss"
+import vue from '@vitejs/plugin-vue2'
+import { defineConfig } from 'vite'
+import WindiCSS from 'vite-plugin-windicss'
 
 export default () => {
   return defineConfig({
-    base: "./",
+    base: './',
 
-    root: "demo",
+    root: 'demo',
 
     build: {
-      target: "esnext",
+      target: 'esnext',
     },
 
-    plugins: [vue(), WindiCSS()],
+    plugins: [
+      vue(),
+      WindiCSS({
+        scan: {
+          dirs: ['.'],
+          fileExtensions: ['vue', 'js', 'ts'],
+        },
+      }),
+    ],
 
     server: {
       port: 5173,

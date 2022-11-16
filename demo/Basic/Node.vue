@@ -67,4 +67,8 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+.node
+  background-color: #fff
+  box-shadow: 0px 4px 30px rgb(22 33 74 / 5%)
+</style>

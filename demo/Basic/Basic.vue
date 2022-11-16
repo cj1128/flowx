@@ -56,7 +56,7 @@ export default {
   },
 
   beforeDestroy() {
-    _flowx.destroy()
+    _flowx?.destroy()
     window._flowx = null
   },
 
@@ -68,7 +68,6 @@ export default {
         canvasElement: document.querySelector('#canvas'), // 主画布
         nodeWidth: 380,
         nodeHeight: 140,
-        borderColor: 'red',
         shouldUpdate(newTree, oldTree) {
           // restriction 1. rule10 can not be the root
           if (newTree.data.id === '10') {
